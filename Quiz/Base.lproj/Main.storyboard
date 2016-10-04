@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,6 +20,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EX-gS-NNc">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeT-Gy-oES" userLabel="nextQuestionLabel">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,15 +53,20 @@
                             <constraint firstItem="4bX-rZ-wzr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8KU-PK-1Nm"/>
                             <constraint firstItem="eeE-1E-moT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HsT-59-TIf"/>
                             <constraint firstItem="eeE-1E-moT" firstAttribute="top" secondItem="1EX-gS-NNc" secondAttribute="bottom" constant="8" id="IiE-7i-FS9"/>
+                            <constraint firstItem="AeT-Gy-oES" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="19" id="eeD-NQ-2du"/>
                             <constraint firstItem="1EX-gS-NNc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iUi-oE-cHx"/>
                             <constraint firstItem="4bX-rZ-wzr" firstAttribute="top" secondItem="eeE-1E-moT" secondAttribute="bottom" constant="244" id="nk3-vd-9d7"/>
                             <constraint firstItem="08g-IS-ahw" firstAttribute="top" secondItem="4bX-rZ-wzr" secondAttribute="bottom" constant="8" id="qPf-yp-HHB"/>
+                            <constraint firstItem="AeT-Gy-oES" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sWO-X4-HIt"/>
                             <constraint firstItem="1EX-gS-NNc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xif-WB-GsS"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="4bX-rZ-wzr" id="Qip-1A-QGK"/>
-                        <outlet property="questionLabel" destination="1EX-gS-NNc" id="dli-rv-6ng"/>
+                        <outlet property="currentQuestionLabel" destination="1EX-gS-NNc" id="O42-ee-GiA"/>
+                        <outlet property="currentQuestionLabelCenterXConstraint" destination="xif-WB-GsS" id="124-Dr-Rqq"/>
+                        <outlet property="nextQuestionLabel" destination="AeT-Gy-oES" id="OMz-CN-AdZ"/>
+                        <outlet property="nextQuestionLabelCenterXConstraint" destination="sWO-X4-HIt" id="qSL-o4-n3v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
